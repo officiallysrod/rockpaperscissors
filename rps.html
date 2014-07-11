@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors!</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="rps.js"></script>
+  </head>
+
+  <body>
+    <div class="bodywrapper">
+      <header>
+        <h1 class="headline">ROCK. PAPER. SCISSORS.</h1>
+      </header>
+      <div class="maincontent">
+        <h2 class="headline">Choose Wisely.</h2>
+        <div class="userchoice">
+          <div onclick="userRock(), computerChoice()" id="rock"><h1>R</h1></div>
+          <div onclick="userPaper()" id="paper"><h1>P</h1></div>
+          <div onclick="userScissors()" id="scissors"><h1>S</h1></div>
+        </div>
+        <div class="computerchoice">
+          <div id="computerchoice"><h1>?</h1></div>
+        </div>
+        <div class="scoreboard">
+          <div class="userscore">
+            <h1>Your Score</h1>
+            <h1 id="userscore">0</h1>
+          </div>
+          <div class="computerscore">
+            <h1>It's Score</h1>
+            <h1 id="computerscore">0</h1>
+          </div>
+        </div>
+        <div class="restart">
+          <h1 class="headline">You win/lose.</h1>
+          <h2 class="headline" id="restart">Click to play again.<h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.headline {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.maincontent {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.userchoice {
+  width: 700px;
+  margin: 25px auto;
+  font-size: 80px;
+}
+
+#rock, #paper, #scissors {
+  display: inline-block;
+  padding: 0 50px;
+}
