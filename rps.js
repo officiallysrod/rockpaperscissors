@@ -2,12 +2,31 @@ var choices = [null, "rock", "paper", "scissors"];
 var user_choice = null;
 var computer_choice = null;
 
-function playGame(userChoice) {
+
+
+function setUserChoice(userChoice, not1, not2) {
   user_choice = userChoice;
+  not1 = not1;
+  not2 = not2;
+  document.getElementById(user_choice).style.backgroundColor = "#20A9BA";
+  document.getElementById(not1).style.backgroundColor = "#C2BDC0";
+  document.getElementById(not2).style.backgroundColor = "#C2BDC0";
+}
+
+function setComputerChoice() {
   rand_choice = Math.floor((Math.random() * 3) + 1);
   computer_choice = choices[rand_choice];
-  compare();
+  // document.getElementById("computerchoice").style.backgroundColor = "red";
+  // compare();
+  alert(computer_choice);
 }
+
+// function playGame(userChoice) {
+//   user_choice = userChoice;
+//   rand_choice = Math.floor((Math.random() * 3) + 1);
+//   computer_choice = choices[rand_choice];
+//   compare();
+// }
 
 function compare() {
   if(user_choice != computer_choice) {
