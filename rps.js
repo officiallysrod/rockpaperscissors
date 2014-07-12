@@ -51,11 +51,21 @@ function compare() {
   else {
     document.getElementById("results").innerHTML = "It's a tie.  How unsatisfying.";
   }
-  playAgain();
+  buttonStyle();
+}
+
+function buttonStyle() {
+  document.getElementById("playagain").style.backgroundColor = "red";
+  document.getElementById("playagain").innerHTML = "PLAY AGAIN";
 }
 
 function playAgain() {
-  document.getElementById("playagain").style.backgroundColor = "red";
-  document.getElementById("playagain").innerHTML = "PLAY AGAIN";
-  // document.getElementById("playanchor").innerHTML = "<a href='#''></a>";
+  //style resets. find a better way to globally reset styles to defaults.
+  document.getElementById("rock").style.backgroundColor = "red";
+  document.getElementById("paper").style.backgroundColor = "red";
+  document.getElementById("scissors").style.backgroundColor = "red";
+  document.getElementById("computerchoice").style.backgroundColor = "#20A9BA";
+  document.getElementById("results").innerHTML = "";
+  document.getElementById("playagain").style.backgroundColor = "white";
+  document.getElementById("playagain").innerHTML = "";
 }
