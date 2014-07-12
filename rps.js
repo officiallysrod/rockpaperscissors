@@ -14,13 +14,17 @@ function setUserChoice(userChoice, not1, not2) {
   document.getElementById(not2).style.backgroundColor = "#C2BDC0";
 }
 
+function playGame () {
+  setComputerChoice();
+  compare();
+}
+
 function setComputerChoice() {
   rand_choice = Math.floor((Math.random() * 3) + 1);
   computer_choice = choices[rand_choice];
   letter = letters[rand_choice];
   document.getElementById("computerchoice").style.backgroundColor = "red";
   document.getElementById("letter").innerHTML = letter;
-  compare();
 }
 
 function compare() {
@@ -47,5 +51,11 @@ function compare() {
   else {
     document.getElementById("results").innerHTML = "It's a tie.  How unsatisfying.";
   }
+  playAgain();
 }
 
+function playAgain() {
+  document.getElementById("playagain").style.backgroundColor = "red";
+  document.getElementById("playagain").innerHTML = "PLAY AGAIN";
+  // document.getElementById("playanchor").innerHTML = "<a href='#''></a>";
+}

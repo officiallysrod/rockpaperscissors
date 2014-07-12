@@ -61,7 +61,7 @@ User and Computer Choice Styles
 =========================================================*/
 
 .userchoice, .computerchoice {
-  width: 800px;
+  width: 785px;
   margin: 40px auto;
   padding: 0 50px;
   font-size: 60px;
@@ -88,7 +88,7 @@ User and Computer Choice Styles
 }
 
 .computerchoice {
-  width: 275px;
+  width: 250px;
 }
 
 #computerchoice {
@@ -116,7 +116,8 @@ Results Styles
 }
 
 #playagain {
-  background-color: red;
+  width: 100px;
+  margin: 0 auto;
   color: white;
   border: none;
   padding: 10px;
