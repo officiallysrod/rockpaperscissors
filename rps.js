@@ -1,4 +1,5 @@
 var choices = [null, "rock", "paper", "scissors"];
+var letters = [null, "R", "P", "S"];
 var user_choice = null;
 var computer_choice = null;
 
@@ -16,7 +17,9 @@ function setUserChoice(userChoice, not1, not2) {
 function setComputerChoice() {
   rand_choice = Math.floor((Math.random() * 3) + 1);
   computer_choice = choices[rand_choice];
+  letter = letters[rand_choice];
   document.getElementById("computerchoice").style.backgroundColor = "red";
+  document.getElementById("letter").innerHTML = letter;
   compare();
 }
 
