@@ -61,10 +61,10 @@ User and Computer Choice Styles
 =========================================================*/
 
 .userchoice, .computerchoice {
-  width: 1000px;
-  margin: 50px auto;
-  padding-left: 50px;
-  font-size: 70px;
+  width: 800px;
+  margin: 40px auto;
+  padding: 0 50px;
+  font-size: 60px;
 }
 
 #rock, #paper, #scissors, #computerchoice {
@@ -73,13 +73,14 @@ User and Computer Choice Styles
   background-color: red;
   color: white;
   border-radius: 100%;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   text-align: center;
 }
 
 .userchoice h1, .computerchoice h1 {
-  margin-top: 5px;
+  margin-top: -10px;
+  margin-left: 5px;
 }
 
 #rock:hover, #paper:hover, #scissors:hover {
@@ -87,7 +88,7 @@ User and Computer Choice Styles
 }
 
 .computerchoice {
-  width: 375px;
+  width: 275px;
 }
 
 #computerchoice {
@@ -97,3 +98,43 @@ User and Computer Choice Styles
 #computerchoice:hover {
   background-color: red;
 }
+
+/*=========================================================
+
+Results Styles
+
+=========================================================*/
+
+.results {
+  margin: 55px auto 0 auto;
+  color: red;
+  text-align: center;
+}
+
+.results h1 {
+  font-weight: 600;
+}
+
+#playagain {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
