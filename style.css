@@ -1,21 +1,99 @@
+/*=========================================================
+
+General Styles
+
+=========================================================*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/*=========================================================
+
+Header Styles
+
+=========================================================*/
+
+header {
+  color: red;
+}
+
 .headline {
   width: 100%;
-  margin: 0 auto;
+  margin: 20px auto;
   text-align: center;
+  font-size: 40px;
 }
+
+#mainhead {
+  letter-spacing: 10px;
+  font-weight: 600;
+}
+
+#subhead {
+  margin-top: -30px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid red;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/*=========================================================
+
+Main Content Styles
+
+=========================================================*/
 
 .maincontent {
   width: 100%;
   margin: 0 auto;
 }
 
-.userchoice {
-  width: 700px;
-  margin: 25px auto;
-  font-size: 80px;
+/*=========================================================
+
+User and Computer Choice Styles
+
+=========================================================*/
+
+.userchoice, .computerchoice {
+  width: 1000px;
+  margin: 50px auto;
+  padding-left: 50px;
+  font-size: 70px;
 }
 
-#rock, #paper, #scissors {
+#rock, #paper, #scissors, #computerchoice {
   display: inline-block;
-  padding: 0 50px;
+  margin: 0 50px;
+  background-color: red;
+  color: white;
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+.userchoice h1, .computerchoice h1 {
+  margin-top: 5px;
+}
+
+#rock:hover, #paper:hover, #scissors:hover {
+  background-color: #20A9BA;
+}
+
+.computerchoice {
+  width: 375px;
+}
+
+#computerchoice {
+  background-color: #20A9BA;
+}
+
+#computerchoice:hover {
+  background-color: red;
 }

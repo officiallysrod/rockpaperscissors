@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Rock Paper Scissors!</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="rps.js"></script>
@@ -10,17 +11,17 @@
   <body>
     <div class="bodywrapper">
       <header>
-        <h1 class="headline">ROCK. PAPER. SCISSORS.</h1>
+        <h1 class="headline" id="mainhead">ROCK. PAPER. SCISSORS.</h1>
+        <h2 class="headline" id="subhead">Choose wisely.</h2>
       </header>
       <div class="maincontent">
-        <h2 class="headline">Choose Wisely.</h2>
         <div class="userchoice">
-          <div onclick="playGame('rock')" id="rock"><h1>R</h1></div>
-          <div onclick="playGame('paper')" id="paper"><h1>P</h1></div>
-          <div onclick="playGame('scissors')" id="scissors"><h1>S</h1></div>
+          <div onclick="setUserChoice('rock', 'paper', 'scissors')" id="rock"><a href="#"><h1>R</h1></a></div>
+          <div onclick="setUserChoice('paper', 'rock', 'scissors')" id="paper"><a href="#"><h1>P</h1></a></div>
+          <div onclick="setUserChoice('scissors', 'rock', 'paper')" id="scissors"><a href="#"><h1>S</h1></a></div>
         </div>
         <div class="computerchoice">
-          <div id="computerchoice"><h1>?</h1></div>
+          <div id="computerchoice"><a href="#"><h1>?</h1></a></div>
         </div>
         <div class="scoreboard">
           <div class="userscore">
@@ -33,8 +34,8 @@
           </div>
         </div>
         <div class="restart">
-          <h1 class="headline">You win/lose.</h1>
-          <h2 class="headline" id="restart">Click to play again.<h2>
+          <h1>You win/lose.</h1>
+          <h2 id="restart">Click to play again.<h2>
         </div>
       </div>
     </div>
