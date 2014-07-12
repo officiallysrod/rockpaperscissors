@@ -3,8 +3,6 @@ var letters = [null, "R", "P", "S"];
 var user_choice = null;
 var computer_choice = null;
 
-
-
 function setUserChoice(userChoice, not1, not2) {
   user_choice = userChoice;
   not1 = not1;
@@ -17,41 +15,46 @@ function setUserChoice(userChoice, not1, not2) {
 function playGame () {
   setComputerChoice();
   compare();
+  user_choice = null;
 }
 
 function setComputerChoice() {
-  rand_choice = Math.floor((Math.random() * 3) + 1);
-  computer_choice = choices[rand_choice];
-  letter = letters[rand_choice];
-  document.getElementById("computerchoice").style.backgroundColor = "red";
-  document.getElementById("letter").innerHTML = letter;
+  if(user_choice != null) {
+    rand_choice = Math.floor((Math.random() * 3) + 1);
+    computer_choice = choices[rand_choice];
+    letter = letters[rand_choice];
+    document.getElementById("computerchoice").style.backgroundColor = "red";
+    document.getElementById("letter").innerHTML = letter;
+  }
 }
 
 function compare() {
-  if(user_choice != computer_choice) {
-    if(user_choice == "rock" && computer_choice == "paper") {
-      document.getElementById("results").innerHTML = "Whammy! You lose.";
-    }
-    else if(user_choice == "rock" && computer_choice == "scissors") {
-      document.getElementById("results").innerHTML = "Winner, winner. Chicken dinner.";
-    }
-    else if(user_choice == "paper" && computer_choice == "rock") {
-      document.getElementById("results").innerHTML = "Winner, winner. Chicken dinner.";
-    }
-    else if(user_choice == "paper" && computer_choice == "scissors") {
-      document.getElementById("results").innerHTML = "Whammy! You lose.";
-    }
-    else if(user_choice == "scissors" && computer_choice == "rock") {
-      document.getElementById("results").innerHTML = "Whammy! You lose.";
+  if (user_choice != null) {  
+    if(user_choice != computer_choice) {
+      if(user_choice == "rock" && computer_choice == "paper") {
+        document.getElementById("results").innerHTML = "Whammy! You lose.";
+      }
+      else if(user_choice == "rock" && computer_choice == "scissors") {
+        document.getElementById("results").innerHTML = "Winner, winner. Chicken dinner.";
+      }
+      else if(user_choice == "paper" && computer_choice == "rock") {
+        document.getElementById("results").innerHTML = "Winner, winner. Chicken dinner.";
+      }
+      else if(user_choice == "paper" && computer_choice == "scissors") {
+        document.getElementById("results").innerHTML = "Whammy! You lose.";
+      }
+      else if(user_choice == "scissors" && computer_choice == "rock") {
+        document.getElementById("results").innerHTML = "Whammy! You lose.";
+      }
+      else {
+        document.getElementById("results").innerHTML = "Winner, winner. Chicken dinner.";
+      }
     }
     else {
-      document.getElementById("results").innerHTML = "Winner, winner. Chicken dinner.";
+      document.getElementById("results").innerHTML = "It's a tie.  How unsatisfying.";
     }
+    buttonStyle();
   }
-  else {
-    document.getElementById("results").innerHTML = "It's a tie.  How unsatisfying.";
-  }
-  buttonStyle();
 }
 
 function buttonStyle() {
@@ -65,6 +68,7 @@ function playAgain() {
   document.getElementById("paper").style.backgroundColor = "red";
   document.getElementById("scissors").style.backgroundColor = "red";
   document.getElementById("computerchoice").style.backgroundColor = "#20A9BA";
+  document.getElementById("letter").innerHTML = "?";
   document.getElementById("results").innerHTML = "";
   document.getElementById("playagain").style.backgroundColor = "white";
   document.getElementById("playagain").innerHTML = "";
