@@ -16,9 +16,8 @@ function setUserChoice(userChoice, not1, not2) {
 function setComputerChoice() {
   rand_choice = Math.floor((Math.random() * 3) + 1);
   computer_choice = choices[rand_choice];
-  // document.getElementById("computerchoice").style.backgroundColor = "red";
-  // compare();
-  alert(computer_choice);
+  document.getElementById("computerchoice").style.backgroundColor = "red";
+  compare();
 }
 
 // function playGame(userChoice) {
