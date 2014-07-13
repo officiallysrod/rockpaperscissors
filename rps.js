@@ -8,7 +8,7 @@ var computer_score = 0;
 
 //sets user_choice variable and affects background colors based on user click.
 function setUserChoice(userChoice, not1, not2) {
-  if(computer_choice == null || user_choice == null) {  
+  if(computer_choice === null || user_choice === null) {  
     user_choice = userChoice;
     not1 = not1;
     not2 = not2;
@@ -28,10 +28,10 @@ function playGame() {
 //called by the playGame() function. sets a random value for the computer_choice variable 
 //and changes background color of the element to red.
 function setComputerChoice() {
-  if(user_choice != null && computer_choice == null) {
-    rand_choice = Math.floor((Math.random() * 3) + 1);
+  if(user_choice !== null && computer_choice === null) {
+    var rand_choice = Math.floor((Math.random() * 3) + 1);
     computer_choice = choices[rand_choice];
-    letter = letters[rand_choice];
+    var letter = letters[rand_choice];
     document.getElementById("computerchoice").style.backgroundColor = "red";
     document.getElementById("letter").innerHTML = letter;
   }
@@ -40,7 +40,7 @@ function setComputerChoice() {
 //called by the playGame() function.  compares the user_choice and the 
 //computer_choice variables to declare a winner.  also calls the buttonStyle() function.
 function compare() {
-  if(user_choice != null) {  
+  if(user_choice !== null) {  
     if(user_choice != computer_choice) {
       if((user_choice == "rock" && computer_choice == "scissors") || (user_choice == "paper" && computer_choice == "rock") || (user_choice == "scissors" && computer_choice == "paper")) {
         document.getElementById("results").innerHTML = "Winner, winner. Chicken dinner.";
