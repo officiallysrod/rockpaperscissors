@@ -10,23 +10,23 @@
   </head>
 
   <body>
-    <div class="bodywrapper">
+    <div class="bodywrapper" id="bodywrapper">
       <header>
         <h1 class="headline" id="mainhead">ROCK. PAPER. SCISSORS.</h1>
         <h2 class="headline" id="subhead">Choose wisely.</h2>
       </header>
       <div class="maincontent">
         <div class="userchoice">
-          <div onclick="setUserChoice('rock', 'paper', 'scissors')" id="rock"><a href="#"><h1>R</h1></a></div>
-          <div onclick="setUserChoice('paper', 'rock', 'scissors')" id="paper"><a href="#"><h1>P</h1></a></div>
-          <div onclick="setUserChoice('scissors', 'rock', 'paper')" id="scissors"><a href="#"><h1>S</h1></a></div>
+          <div onclick="setUserChoice('rock', 'paper', 'scissors')" id="rock"><h1>R</h1></div>
+          <div onclick="setUserChoice('paper', 'rock', 'scissors')" id="paper"><h1>P</h1></div>
+          <div onclick="setUserChoice('scissors', 'rock', 'paper')" id="scissors"><h1>S</h1></div>
         </div>
         <div class="computerchoice">
-          <div onclick="playGame()" id="computerchoice"><a href="#"><h1 id="letter">?</h1></a></div>
+          <div onclick="playGame()" id="computerchoice"><h1 id="letter">?</h1></div>
         </div>
         <div class="results">
           <h1 id="results"></h1>
-          <p onclick="playAgain()" id="playagain"></p>
+          <p onclick="playAgain()" id="playagain">PLAY AGAIN</p>
         </div>
       </div>
     </div>

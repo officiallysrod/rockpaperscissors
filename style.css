@@ -60,6 +60,10 @@ User and Computer Choice Styles
 
 =========================================================*/
 
+#rock, #paper, #scissors, #computerchoice {
+  cursor: pointer;
+}
+
 .userchoice, .computerchoice {
   width: 695px;
   margin: 40px auto;
@@ -120,25 +124,14 @@ Results Styles
 #playagain {
   width: 100px;
   margin: 0 auto;
+  background-color: red;
   color: white;
   border: none;
   padding: 10px;
   font-weight: 600;
-  cursor: default;
+  cursor: pointer;
+  visibility: hidden;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*TO DO: ADD STYLES AND TEXT INTO THE RESULTS SECTION AND SET THE .RESULTS CLASS TO
+VISIBILITY: HIDDEN.  THEN, IN THE JAVASCRIPT, CHANGE STYLE TO VISIBILITY: VISIBLE ON CLICK.
