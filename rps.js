@@ -9,6 +9,7 @@ var computer_score = 0;
 //sets user_choice variable and affects background colors based on user click.
 function setUserChoice(userChoice, not1, not2) {
   if(computer_choice === null) {
+    user_choice = userChoice;
     document.getElementById(userChoice).style.backgroundColor = "#20A9BA";
     document.getElementById(not1).style.backgroundColor = "#DEDEDD";
     document.getElementById(not2).style.backgroundColor = "#DEDEDD";
